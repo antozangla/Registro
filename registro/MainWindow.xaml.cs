@@ -33,6 +33,14 @@ namespace registro
             Alunno a = new Alunno(txtNome.Text, txtCognome.Text);
             classe.Add(a);
         }
+
+        private void btnVisualizza_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(Alunno a in classe)
+            {
+                lst1.Items.Add(a.Stampa());
+            }
+        }
     }
     class Alunno
     {
@@ -41,6 +49,10 @@ namespace registro
         {
             nome = n;
             cognome = c;
+        }
+        public string Stampa()
+        {
+            return nome + " " + cognome;
         }
     }
 }
