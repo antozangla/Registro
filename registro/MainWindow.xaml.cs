@@ -41,6 +41,12 @@ namespace registro
                 lst1.Items.Add(a.Stampa());
             }
         }
+
+        private void btnElimina_Click(object sender, RoutedEventArgs e)
+        {
+            classe.RemoveAt(0);
+            lst1.Items.Clear();
+        }
     }
     class Alunno
     {
